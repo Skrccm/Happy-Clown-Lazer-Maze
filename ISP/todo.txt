@@ -1,0 +1,35 @@
+CD /2
+Properly setup Jewel case.
+Attractive CD Cover (front).
+Attractive CD inside/back.
+Game screen shots.
+Computer Requirements.
+Clear copyright/ownership - team names etc..
+
+User Interface	/5
+User interface - user friendly.
+Initial program setup - clear, obvious.
+Clear user instructions/errortraps/messages.
+Graphics/screen design w/ at least 3 different screens.
+Full menus with function key access.
+
+Program Organization	/5
+Follows all programming conventions.
+Basic organization (class structure).
+Processing.
+KISS - redundancy.
+Proper use of file/folders setup of program.
+	
+Specific Program Elements	/5
+Data classes & structure of data management arrays/arraylists.
+Integrated .chm file.
+Algorithmic processing/logic.
+Game rules - errortrapped.
+Printing - high score or game rules.
+	
+Other Features	/5
+Installation program from CD.
+Executable file which loads the application.  (This includes a jar file.)
+Ability to pause game.
+High score file - sorted by score.
+At least 3 game levels.
