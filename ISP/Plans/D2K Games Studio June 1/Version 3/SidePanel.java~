@@ -1,0 +1,26 @@
+import javax.swing.*;
+public class SidePanel extends JPanel
+{
+  private MainMenu parent;
+  private  PanelTimer timer;
+  /**
+   * Stores the Serial Version UID.
+   */
+  private static final long serialVersionUID = 1L;
+  public SidePanel(MainMenu parent)
+  {
+    setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+    this.parent=parent;
+    timer=new PanelTimer();
+    timer.setOpaque(false);
+    JButton run=ButtonMaker.makeButton("run",parent);
+    JButton pause=ButtonMaker.makeButton("pause",parent);
+    add(timer);
+    add(run);
+    add(pause);
+  }
+  public void timerControl(int x)
+  {
+    timer.timerControl(x);
+  }
+}

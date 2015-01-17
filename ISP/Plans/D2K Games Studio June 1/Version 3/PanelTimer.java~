@@ -1,0 +1,108 @@
+/*
+ * To do:
+ * complete startTime () method to stop
+ * Compensate for pauses
+ */ 
+import javax.swing.*;
+import java.awt.event.*;
+/**
+ * This class contains the timer for the game.
+ * It counts up minutes and seconds. We are assuming that the 
+ * player is not going to play a level for more than 99 minutes
+ * and 59 seconds (that would be pretty crazy).
+ * Variable Dictionary
+ * <PRE>Name                  Type                 Description</PRE>
+ * <PRE>second                int                  stores the amount of seconds</PRE>
+ * <PRE>minute                int                  stores the amount of minutes</PRE>
+ * @author Jun Hee Cho, Calvin Chan
+ * @since 24 May 2012
+ * @version 2
+ */ 
+public class PanelTimer extends JPanel implements ActionListener
+{
+  private Timer timer;
+  private JLabel[] numbers;
+  private int counter;
+  private ImageIcon[] images;
+  /**
+   * The constructor for the Timer sets the seconds and minutes to 0 and starts the timer.
+   */ 
+  public PanelTimer ()
+  {
+    timer=new Timer(1000,this);
+    timer.setInitialDelay(1000);
+    timer.setRepeats(true);
+    numbers=new JLabel[5];
+    images=new ImageIcon[10];
+    for(int x=0;x<10;x++)
+    {
+      images[x]=new ImageIcon("images/numbers/"+x+".png");
+    }
+    for(int x=0;x<5;x++)
+    {
+      if(x==2)
+      {
+        numbers[x]=new JLabel(new ImageIcon("images/numbers/colon.png"));
+      }
+      else
+      {
+        numbers[x]=new JLabel(images[0]);
+      }
+      add(numbers[x]);
+    }
+  }
+  public void start()
+  {
+    counter=0;
+    setNumbers(0);
+    timer.restart();
+  }
+  public void stop()
+  {
+    timer.stop();
+    setNumbers(0);
+  }
+  public int getTime()
+  {
+    return counter;
+  }
+  public void timerControl(int x)
+  {
+    if(x==0)
+    {
+      start();
+    }
+    else if(x==1)
+    {
+      timer.start();
+    }
+    else if(x==2)
+    {
+      timer.stop();
+    }
+    else
+    {
+      stop();
+    }
+  }
+  public void setNumbers(int count)
+  {
+    String seconds = Integer.toString (count % 60);
+    String minutes = Integer.toString ((int) (count / 60) % 60);
+    if (Integer.parseInt (seconds) < 10)
+      seconds = "0" + seconds;
+    if (Integer.parseInt (minutes) < 10)
+      minutes = "0" + minutes;
+    String full=minutes+":"+seconds;
+    for(int x=0;x<5;x++)
+    {
+      if(x!=2)
+        numbers[x].setIcon(images[Integer.parseInt(""+full.charAt(x))]);
+    }
+  }
+  public void actionPerformed(ActionEvent ae)
+  {
+    counter++;
+    setNumbers(counter);
+  }
+}
