@@ -1,0 +1,31 @@
+package files;
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
+import javax.imageio.*;
+import java.net.*;
+public class ImageLoader
+{
+  static public InputStream inputStream(String filename)
+  {
+    return ImageLoader.class.getResourceAsStream(filename);
+  }
+  static public Image image(String filename)
+  {
+    try
+    {
+      Image image = ImageIO.read(new BufferedInputStream(inputStream(filename)));
+      return image;
+    }
+    catch(IOException ioe)
+    {
+      return null;
+    }
+    
+  }
+  static public ImageIcon imageIcon(String filename)
+  {
+    ImageIcon imageIcon = new ImageIcon(image(filename));
+    return imageIcon;
+  }
+}

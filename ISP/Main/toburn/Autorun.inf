@@ -1,0 +1,10 @@
+[autorun]
+label = Happy Klown- Lazer Maze
+open = autorun.exe [verb00][1] "installer.msi"
+icon = autorun.exe
+shell\verb00\command = autorun.exe [verb00][1] "installer.msi"
+shell\verb00 = Install Happy Klown- Lazer Maze
+shell = verb00
+
+[Installed]
+ProductCode = {05F510F0-73ED-4447-8CFA-D1A0FB66A4D8}

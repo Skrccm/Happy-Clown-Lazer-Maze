@@ -1,0 +1,121 @@
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
+
+/**
+ * This class contains and draws the grid for the laser game.
+ * It also loads the level from a file that is premade.
+ * @author Jun Hee Cho, Calvin Chan
+ * @since 18 May 2012
+ * @version 1
+ * <p>
+ * Variable Dictionary
+ * <PRE>Name                  Type                 Description</PRE>
+ * <PRE>grid                  int [] []            stores the grid</PRE>
+ * <PRE>parent                MainMenu             stores the instance of MainMenu</PRE>
+ * <PRE>MIRROR_NORTH          int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_NORTHEAST      int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_EAST           int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_SOUTHEAST      int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_SOUTH          int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_SOUTHWEST      int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_WEST           int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>MIRROR_NORTHWEST      int                  used to identify which object is in a grid cell</PRE>
+ * <PRE>EMPTY                 int                  used to identify which object is in a grid cell</PRE>
+ */ 
+public class LaserGrid extends JPanel implements ActionListener
+{
+  //Stores the grid and the items in it.
+  private int [][] grid;
+  //Stores an instance of MainMenu
+  private MainMenu parent;
+  
+  /**
+   * These final int values define what each number represents on the grid [] [] variable.
+   */ 
+  final private int MIRROR_NORTH = 1;
+  final private int MIRROR_NORTHEAST = 2;
+  final private int MIRROR_EAST = 3;
+  final private int MIRROR_SOUTHEAST = 4;
+  final private int MIRROR_SOUTH = 5;
+  final private int MIRROR_SOUTHWEST = 6;
+  final private int MIRROR_WEST = 7;
+  final private int MIRROR_NORTHWEST = 8;
+  
+  final private int EMPTY = 0;
+  
+  /**
+   * The constructor for LaserGrid.
+   * This class first initializes the grid variable to be an array 10 by 10.
+   * It then calls the readLevel () method, which assigns values to the grid variable.
+   * The JPanel is set as not opaque, 520x520 pixels with the FlowLayout.
+   * It then creates a series of buttons using for loops that represents the grid. 
+   * @param parent stores the instance of MainMenu
+   */
+  public LaserGrid (MainMenu parent)
+  {
+    this.parent = parent;
+    grid = new int [10][10];
+    readLevel ();
+    setOpaque(false);
+    setPreferredSize (new Dimension (520, 520));
+    setLayout(new FlowLayout());
+    
+    for (int x = 0; x < grid.length; x++)
+    {
+      for (int y = 0; y < grid.length; y++)
+      {
+        String name = Integer.toString (x) + " " + Integer.toString (y);
+        JButton buttons=ButtonMaker.makeButton(name,this);
+        this.add(buttons);
+      }
+    }
+  }
+  
+  /**
+   * This method reads from a file that contains information about a level.
+   * The file contains information such as the objects in each cell, empty spaces, orientation, etc.
+   * If the file is not found, an IOException is thrown with a message dialog.
+   * Variable Dictionary
+   * <PRE>Name                  Type                 Description</PRE>
+   * <PRE>header                String               stores the header of the file</PRE>
+   * <PRE>in                    BufferedReader       stores the instance of BufferedReader</PRE> 
+   * <PRE>line                  String               stores a line in the file</PRE>
+   */
+  public void readLevel ()
+  {
+    String header;
+    try {
+      BufferedReader in = new BufferedReader (new FileReader ("leveldat.d2k"));
+      header = in.readLine ();
+      if (!header.equals ("Level data for D2K Games Studio (For Kidz!)"))
+      {
+        JOptionPane.showMessageDialog (this, "File not compatible with program, or file is empty", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+      }
+      for (int x = 0; x < grid.length; x++)
+      {
+        String line;
+        for (int y = 0; y < grid.length; y++)
+        {
+          line = in.readLine ();
+          grid [x] [y] = Integer.parseInt (line.charAt (y));
+        }
+      }
+    }
+    catch (IOException e)
+    {
+      JOptionPane.showMessageDialog (this, "File not found", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+  }
+  
+  /**
+   * This method is called when a button is pressed for the grid. 
+   * It determines what action to do when a specific button is pressed.
+   * @param ae stores the ActionEvent that contains the information about the action.
+   */ 
+  public void actionPerformed (ActionEvent ae)
+  {
+  }
+}
