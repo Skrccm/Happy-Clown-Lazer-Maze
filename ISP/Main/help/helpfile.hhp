@@ -1,0 +1,39 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=helpfile.chm
+Contents file=Table of Contents.hhc
+Default topic=Overview.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+BackButton.htm
+CompletingLevel.htm
+Exit2Desktop.htm
+Exit2MainMenu.htm
+ExitButton.htm
+GameScreenMenu.htm
+HelpButton.htm
+HowLaserWorks.html
+HowMirrorsWork.html
+HowToPlay.htm
+LevelComplete.htm
+LevelSelect.htm
+LevelSelectButtons.htm
+MainMenu.htm
+Menus.htm
+NextLevelButton.html
+Overview.htm
+PauseButton.htm
+PauseMenu.htm
+PlayButton.htm
+ReplayButton.html
+ResetButton.htm
+ResumeButton.htm
+RotatingMirrors.htm
+ShootingLaser.htm
+
+[INFOTYPES]
+

@@ -1,0 +1,62 @@
+package files;
+import javax.swing.*;
+import java.awt.*;
+public class LevelCompleteScreen extends JPanel
+{
+  private static final long serialVersionUID =1L;
+  private MainMenu parent;
+  private JLabel[] time;
+  private ImageIcon[] numbers;
+  public LevelCompleteScreen(MainMenu parent)
+  {
+    setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
+    setOpaque(false);
+    this.parent=parent;
+    JLabel title=new JLabel(ImageLoader.imageIcon("/images/levelcomplete/levelcomplete.png"));
+    title.setAlignmentX(Component.CENTER_ALIGNMENT);
+    JPanel scoreIs=new JPanel();
+    scoreIs.setOpaque(false);
+    scoreIs.setAlignmentX(Component.CENTER_ALIGNMENT);
+    scoreIs.setLayout(new BoxLayout(scoreIs, BoxLayout.LINE_AXIS));
+    JLabel score=new JLabel(ImageLoader.imageIcon("/images/yourscore/ysi.png"));
+    time=new JLabel[5];
+    scoreIs.add(score);
+    numbers=new ImageIcon[10];
+    for(int x=0;x<5;x++)
+    {
+      time[x]=new JLabel();
+      time[x].setOpaque(false);
+      scoreIs.add(time[x]);
+    }
+    time[2].setIcon(ImageLoader.imageIcon("/images/numbers/colon.png"));
+    for(int x=0;x<10;x++)
+    {
+      numbers[x]=ImageLoader.imageIcon("/images/numbers/"+x+".png");
+    }
+    JButton nextLevel=ButtonMaker.makeButton("nextlevel",parent);
+    JButton replayLevel=ButtonMaker.makeButton("replay",parent);
+    JButton backMain =ButtonMaker.makeButton("backtomain",parent);
+    add(title);
+    add(scoreIs);
+    add(nextLevel);
+    add(replayLevel);
+    add(backMain);
+  }
+  public void updateScore()
+  {
+    int temp=parent.getTime();
+    String seconds = Integer.toString (temp % 60);
+    String minutes = Integer.toString ((int) (temp / 60) % 60);
+    if (Integer.parseInt (seconds) < 10)
+      seconds = "0" + seconds;
+    if (Integer.parseInt (minutes) < 10)
+      minutes = "0" + minutes;
+    String full=minutes+":"+seconds;
+    for(int x=0;x<5;x++)
+    {
+      if(x!=2)
+        time[x].setIcon(numbers[Integer.parseInt(""+full.charAt(x))]);
+    }
+    parent.addScore(temp);
+  }
+}

@@ -1,0 +1,107 @@
+package files;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.image.*;
+/**
+ * The button that holds the images of mirrors, blocks, and laser animations
+ * 
+ * @author Calvin Chan, JunHee Cho
+ * @version 4 June 12th, 2012
+ */
+public class LaserButton extends JButton implements ActionListener
+{
+  /**
+   * Stores the Serial Version UID. 
+   */
+  private static final long serialVersionUID = 1L;
+  /**
+   * The timer to control the animation speed
+   */
+  private javax.swing.Timer timer;
+  /**
+   * Counter to keep position of the frame of animation
+   */
+  private int counter=1;
+  /**
+   * Reference variable to the lasergrid parent
+   */
+  private LaserGrid parent;
+  /**
+   * Array of imageicons to display.
+   */
+  private ImageIcon[] images;
+  /**
+   * Sets up the laser button
+   * @param parent The lasergrid parent
+   */
+  public LaserButton(LaserGrid parent)
+  { 
+    this.parent=parent;
+    setBorder (null);
+    setBorderPainted(false);
+    setFocusable(false);
+    setBackground(Color.WHITE);
+    setPreferredSize(new Dimension(52,52));
+    timer=new javax.swing.Timer(1,this);
+  }
+  /**
+   * Sets up the button to draw
+   * @param image the images to draw
+   */
+  public void draw(ImageIcon[] image)
+  { 
+    counter=-1;
+    if(image==null)
+    {
+      this.images=image;
+      return;
+    }
+    if(images!=null)
+    {
+      ImageIcon[] temp=new ImageIcon[images.length+50];
+      for(int x=0;x<images.length;x++)
+      {
+        temp[x]=images[x];
+      }
+      Image temp2=images[images.length-1].getImage();
+      for(int x=0;x<50;x++)
+      {
+        BufferedImage temp3=new BufferedImage(52,52,BufferedImage.TYPE_INT_ARGB);
+        Graphics g=temp3.createGraphics();
+        g.drawImage(temp2,0,0,null);
+        g.drawImage(image[x].getImage(),0,0,null);
+        g.dispose();
+        temp[temp.length-50+x]=new ImageIcon(temp3);
+      }
+      this.images=temp;
+    }
+    else
+    {
+      this.images=image;
+    }
+  }
+  /**
+   * Starts drawing
+   */
+  public void draw()
+  {
+    timer.start();
+  }
+  /**
+   * Called every time the timer fires, changes to the next image
+   * and stops once it reaches the end
+   * @param ae Contains more information about the event
+   */
+  public void actionPerformed(ActionEvent ae)
+  {
+    counter++;
+    setIcon((images[counter]));
+    if(counter%50==49||!parent.isDrawing())
+    {
+      timer.stop();
+      parent.run();
+      return;
+    }
+  }
+}

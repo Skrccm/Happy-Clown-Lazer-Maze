@@ -1,0 +1,8 @@
+music3=mainmenu
+priority list
+snow
+grass
+desert
+do not use
+desert ambient
+wind

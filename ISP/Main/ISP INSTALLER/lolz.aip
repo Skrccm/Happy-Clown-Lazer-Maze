@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="9.2" version="9.2" Modules="java" RootPath="." Language="en" Id="{3817FCD9-5D0F-49D1-BC02-0AB0357775CF}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiValidationComponent">
+    <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="32767" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="2" ColumnIndex="7" ColumnSize="2" MsiKey="File#Sequence"/>
+    <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="32767" Description="File sequence number for the last file for this media." Options="0" ColumnType="2" ColumnIndex="1" ColumnSize="2" MsiKey="Media#LastSequence"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_CF_FrameBottomLeft" Value="frame_bottom_left.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameBottomLeftInactive" Value="frame_bottom_left_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameBottomMid" Value="frame_bottom_mid.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameBottomMidInactive" Value="frame_bottom_mid_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameBottomRight" Value="frame_bottom_right.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameBottomRightInactive" Value="frame_bottom_right_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameCaption" Value="frame_caption.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameCaptionInactive" Value="frame_caption_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameLeft" Value="frame_left.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameLeftInactive" Value="frame_left_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameRight" Value="frame_right.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameRightInactive" Value="frame_right_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameTopLeft" Value="frame_top_left.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameTopLeftInactive" Value="frame_top_left_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameTopMid" Value="frame_top_mid.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameTopMidInactive" Value="frame_top_mid_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameTopRight" Value="frame_top_right.bmp" Type="1"/>
+    <ROW Property="AI_CF_FrameTopRightInactive" Value="frame_top_right_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysCloseDown" Value="sys_close_down.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysCloseHot" Value="sys_close_hot.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysCloseInactive" Value="sys_close_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysCloseNormal" Value="sys_close_normal.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysMinDown" Value="sys_min_down.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysMinHot" Value="sys_min_hot.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysMinInactive" Value="sys_min_inactive.bmp" Type="1"/>
+    <ROW Property="AI_CF_SysMinNormal" Value="sys_min_normal.bmp" Type="1"/>
+    <ROW Property="AI_CF_TYPE" Value="0" MultiBuildValue="DefaultBuild:1" Type="4"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MultiBuildValue="DefaultBuild:classic" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="Hi There." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="HappyKlownLazerMaze_1.exe" Type="8"/>
+    <ROW Property="CTRLS" Value="1"/>
+    <ROW Property="Manufacturer" Value="D2K Games Studio" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{05F510F0-73ED-4447-8CFA-D1A0FB66A4D8} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Happy Klown- Lazer Maze" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.3.3.7" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{90F18E32-3BB4-466B-8185-E7912AC34FEC}"/>
+    <ROW Property="VIEWREADME" Value="1" Type="4"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="data_Dir" Directory_Parent="APPDIR" DefaultDir="data"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="HappyKlownLazerMaze.jar" ComponentId="{AB124BD8-F1C3-483D-9C80-0060CE763438}" Directory_="APPDIR" Attributes="0" KeyPath="HappyKlownLazerMaze.jar" Type="0"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{7C41614C-C5F7-44A9-9FE1-EB4E741B2998}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="helpfile.chm" ComponentId="{5A8855DF-7CEB-4046-A473-D435A401D9E9}" Directory_="data_Dir" Attributes="0" KeyPath="helpfile.chm" Type="1"/>
+    <ROW Component="helpscreen.html" ComponentId="{6BF13F23-D093-44C9-8703-3A53EF58A832}" Directory_="data_Dir" Attributes="0" KeyPath="helpscreen.html" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="HappyKlownLazerMaze.jar SHORTCUTDIR helpfile.chm helpscreen.html"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="HappyKlownLazerMaze.jar" Component_="HappyKlownLazerMaze.jar" FileName="HappyK~1.jar|HappyKlown-LazerMaze.jar" Attributes="0" SourcePath="E:\Work\WLMCI gr 10 work\Computer Science ICS 4U\Assignments\ISP\Main\GAMETEST\HappyKlown-LazerMaze.jar" SelfReg="false"/>
+    <ROW File="README.txt" Component_="helpscreen.html" FileName="README.txt" Attributes="0" SourcePath="E:\Work\WLMCI gr 10 work\Computer Science ICS 4U\Assignments\ISP\Main\GAMETEST\data\README.txt" SelfReg="false" NextFile="HappyKlownLazerMaze.jar"/>
+    <ROW File="helpfile.chm" Component_="helpfile.chm" FileName="helpfile.chm" Attributes="0" SourcePath="E:\Work\WLMCI gr 10 work\Computer Science ICS 4U\Assignments\ISP\Main\GAMETEST\data\helpfile.chm" SelfReg="false" NextFile="helpscreen.html"/>
+    <ROW File="helpscreen.html" Component_="helpscreen.html" FileName="helpsc~1.htm|helpscreen.html" Attributes="0" SourcePath="E:\Work\WLMCI gr 10 work\Computer Science ICS 4U\Assignments\ISP\Main\GAMETEST\data\helpscreen.html" SelfReg="false" NextFile="README.txt"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
+    <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignOptions="0" SignTool="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="frame_bottom_left.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_bottom_left.bmp"/>
+    <ROW Name="frame_bottom_left_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_bottom_left_inactive.bmp"/>
+    <ROW Name="frame_bottom_mid.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_bottom_mid.bmp"/>
+    <ROW Name="frame_bottom_mid_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_bottom_mid_inactive.bmp"/>
+    <ROW Name="frame_bottom_right.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_bottom_right.bmp"/>
+    <ROW Name="frame_bottom_right_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_bottom_right_inactive.bmp"/>
+    <ROW Name="frame_caption.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_caption.bmp"/>
+    <ROW Name="frame_caption_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_caption_inactive.bmp"/>
+    <ROW Name="frame_left.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_left.bmp"/>
+    <ROW Name="frame_left_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_left_inactive.bmp"/>
+    <ROW Name="frame_right.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_right.bmp"/>
+    <ROW Name="frame_right_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_right_inactive.bmp"/>
+    <ROW Name="frame_top_left.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_top_left.bmp"/>
+    <ROW Name="frame_top_left_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_top_left_inactive.bmp"/>
+    <ROW Name="frame_top_mid.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_top_mid.bmp"/>
+    <ROW Name="frame_top_mid_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_top_mid_inactive.bmp"/>
+    <ROW Name="frame_top_right.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_top_right.bmp"/>
+    <ROW Name="frame_top_right_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;frame_top_right_inactive.bmp"/>
+    <ROW Name="sys_close_down.bmp" SourcePath="&lt;AI_FRAME_BTNS&gt;sys_close_down.bmp"/>
+    <ROW Name="sys_close_hot.bmp" SourcePath="&lt;AI_FRAME_BTNS&gt;sys_close_hot.bmp"/>
+    <ROW Name="sys_close_inactive.bmp" SourcePath="&lt;AI_FRAME_BTNS&gt;sys_close_inactive.bmp"/>
+    <ROW Name="sys_close_normal.bmp" SourcePath="&lt;AI_FRAME_BTNS&gt;sys_close_normal.bmp"/>
+    <ROW Name="sys_min_down.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;sys_min_down.bmp"/>
+    <ROW Name="sys_min_hot.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;sys_min_hot.bmp"/>
+    <ROW Name="sys_min_inactive.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;sys_min_inactive.bmp"/>
+    <ROW Name="sys_min_normal.bmp" SourcePath="&lt;AI_FRAME_COLOR&gt;sys_min_normal.bmp"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_ViewReadme" Type="1" Source="aicustact.dll" Target="[#README.txt]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[WindowsVolume][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="HappyKlownLazerMaze_1.exe" SourcePath="icons\shortcut img.ico" Index="0"/>
+    <ROW Name="SystemFoldermsiexec.exe" SourcePath="&lt;AI_RES&gt;uninstall.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="HappyKlownLazerMaze" Directory_="DesktopFolder" Name="HappyK~1|Happy Klown - Lazer Maze" Component_="HappyKlownLazerMaze.jar" Target="[#HappyKlownLazerMaze.jar]" Hotkey="0" Icon_="HappyKlownLazerMaze_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="HappyKlownLazerMaze_1" Directory_="SHORTCUTDIR" Name="HappyK~1|Happy Klown - Lazer Maze" Component_="HappyKlownLazerMaze.jar" Target="[#HappyKlownLazerMaze.jar]" Hotkey="0" Icon_="HappyKlownLazerMaze_1.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="Uninstall" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall" Component_="SHORTCUTDIR" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

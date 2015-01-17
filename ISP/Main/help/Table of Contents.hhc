@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Overview">
+		<param name="Local" value="Overview.htm">
+		<param name="ImageNumber" value="12">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Navigating the Menus">
+		<param name="Local" value="Menus.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="The Main Menu">
+			<param name="Local" value="MainMenu.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Play Button">
+				<param name="Local" value="PlayButton.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Help Button">
+				<param name="Local" value="HelpButton.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The HighScore Button">
+				<param name="Local" value="HighScoreButton.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Exit Button">
+				<param name="Local" value="ExitButton.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="The Level Select Screen">
+			<param name="Local" value="LevelSelect.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Level Select Buttons">
+				<param name="Local" value="LevelSelectButtons.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Back Button">
+				<param name="Local" value="BackButton.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="The Game Screen">
+			<param name="Local" value="GameScreenMenu.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Pause Button">
+				<param name="Local" value="PauseButton.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="The Pause Menu">
+			<param name="Local" value="PauseMenu.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Resume Button">
+				<param name="Local" value="ResumeButton.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Reset Button">
+				<param name="Local" value="ResetButton.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Exit to Main Menu Button">
+				<param name="Local" value="Exit2MainMenu.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Exit to Desktop Button">
+				<param name="Local" value="Exit2Desktop.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Level Complete Screen">
+			<param name="Local" value="LevelComplete.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Next Level Button">
+				<param name="Local" value="NextLevelButton.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="The Replay Button">
+				<param name="Local" value="ReplayButton.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="How To Play">
+		<param name="Local" value="HowToPlay.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How Mirrors Work">
+			<param name="Local" value="HowMirrorsWork.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to Rotate Mirrors">
+			<param name="Local" value="RotatingMirrors.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How the Laser Works">
+			<param name="Local" value="HowLaserWorks.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to Shoot the Laser">
+			<param name="Local" value="ShootingLaser.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="How to Complete the Level">
+			<param name="Local" value="CompletingLevel.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
